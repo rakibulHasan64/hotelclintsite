@@ -1,5 +1,8 @@
+import ExxluseiveOffers from "./ExxluseiveOffers";
 import FuterHotell from "./FuterHotell";
 import Hero from "./Hero";
+import Inspried from "./Inspried";
+import Tastmonile from "./Tastmonile";
 
 function Home() {
    return (
@@ -8,6 +11,11 @@ function Home() {
          <div className="">
             <Hero />
             <FuterHotell />
+
+            <ExxluseiveOffers />
+
+            <Tastmonile />
+            <Inspried />
          </div>
 
          

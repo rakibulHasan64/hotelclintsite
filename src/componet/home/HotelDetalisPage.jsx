@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { assets, roomsDummyData } from "../../assets/assets";
+import { assets, facilityIcons, roomsDummyData } from "../../assets/assets";
 
 
 function HotelDetalisPage() {
@@ -71,6 +71,43 @@ function HotelDetalisPage() {
 
 
             </div>
+
+
+
+            <div className="flex flex-col md:flex-row md:justify-between mt-10">
+
+               <div className="flex flex-col">
+                  <h2 className="text-3xl md:text-4xl ">Experience Luxury Like Never Before</h2>
+
+                  <div className="flex flex-wrap items-center mt-3 mb-6 gap-4">
+                     {room.amenities.map((item, index) => (
+                        <div key={index} className="flex items-center gap-2 px-2 py-2 rounded-lg bg-gray-100">
+                           <img className="w-5 h-5" src={facilityIcons[item]} alt={item} />
+
+                           <p className="text-xs">{item}</p>
+
+                        </div>
+                     ))}
+                  </div>
+               </div>
+
+               {/* Room Prie */}
+
+               <p className="text-2xl font-medium">${room.pricePerNight}/night</p>
+
+               <form className="flex flex-col md:flex-row items-start md:items-center justify-between bg-white shadow-[0px_20px_rgba(o,o,o,o,o.15)] p-6 rounded-xl mx-auto mt-16 max-w-6xl">
+
+
+                  <div className="">
+                     
+                  </div>
+               </form>
+               
+            </div>
+
+
+
+
          </div> 
          
       </>
